@@ -30,7 +30,7 @@ now and expensive to add after the screens and the service are built.
 ## Considered instead
 
 **Built for this builder only, with no settings layer.** Claude first read the owner's
-short answer ("for 1 steve") this way and recorded it; the owner corrected it the same
+short answer ("for 1 [the builder]") this way and recorded it; the owner corrected it the same
 night. It keeps the tool smallest today, at the price of rework for any second builder.
 
 **Build for builders in general now.** Never proposed as the first step; it would mean
@@ -47,9 +47,10 @@ parked, not answered.
 
 ## His words
 
-> steve first
+> [the builder] first
 
 ## Links
 
 - `docs/history/2026-11-19-full-review.md`, sections 2, 3 and 5 (item 7).
 - Decisions 0002 (markup on the total) and 0004 (contingency by group): both stand as they are, as this builder's settings.
+- The builder's first name in the two quotes above was replaced with "[the builder]" on 2026-11-19, to keep the rule in `AGENTS.md`. Nothing else in the quotes changed.
