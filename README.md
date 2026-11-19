@@ -8,6 +8,7 @@ This repository holds the code, the decisions behind it, and the test results. I
 
 | Folder | What's in it |
 |---|---|
+| `STATUS.md` | Where we are, what is next, and what is waiting on the owner. |
 | `CURRENT.md` | Every decision that stands right now. Generated — don't edit it by hand. |
 | `decisions/` | One file per decision, numbered. Nothing here is ever deleted; a replaced decision is marked superseded and points at what replaced it. |
 | `docs/` | How an estimate is made (`method.md`), the shared data format (`format.md`), build and design standards (`standards.md`), screen designs (`screens/`), what we know and still need from the builder (`builder/`). |

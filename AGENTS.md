@@ -11,9 +11,10 @@ Two people are involved. **The owner** is who you talk to; he decides what the t
 ## Start of session
 
 1. Read this file.
-2. Read `CURRENT.md` — every decision that stands right now, generated from `decisions/`.
-3. Read only the decision files for the area you are working in (`grep -l "area: screens" decisions/*.md`).
-4. Read `docs/method.md` before any estimating, `docs/standards.md` before any build or design work, `docs/format.md` before writing or reading an estimate file.
+2. Read `STATUS.md` — where we are, what is next, what is waiting on the owner.
+3. Read `CURRENT.md` — the decisions that stand right now, generated from `decisions/`. Until `STATUS.md` says the backfill is finished, it is not the full list.
+4. Read only the decision files for the area you are working in (`grep -l "area: screens" decisions/*.md`).
+5. Read `docs/method.md` before any estimating, `docs/standards.md` before any build or design work, `docs/format.md` before writing or reading an estimate file.
 
 Do not read the whole of `decisions/` or the history in `docs/history/`. Search them when you need to know why something was decided.
 
@@ -27,12 +28,14 @@ These are not negotiable and they outrank convenience.
 4. **Scope before quantity before price.** A missed line costs more than a mismeasured one. Never drop or add a line silently.
 5. **Arithmetic runs in code, never in your head.** Check totals before showing them.
 6. **Engineering decisions are not ours.** Flag them.
+7. **His building habits count.** Where he builds differently from the drawings (bigger footings, for example), his recorded rule wins over the drawn minimum. Until a rule is recorded, the line stays Medium at best.
+8. **When the plans and his past estimates disagree, flag it.** Do not pick one.
 
 The full set is `docs/method.md`. Where this file and that one differ, that one wins.
 
 ## What never enters this repository
 
-Client names, street addresses, phone numbers, tax and bank details, and vendor or subcontractor names. The builder's own cost figures and line wording are allowed — the owner approved that on 2026-11-18 — but personal and third-party identifying data is not, and the original plan PDFs never come in at all.
+Client names, street addresses, phone numbers, tax and bank details, and vendor or subcontractor names. The builder's own cost figures and line wording are allowed — the owner approved that on 2026-11-18 (decision 0012) — but personal and third-party identifying data is not, and the original plan PDFs never come in at all.
 
 Jobs are referred to as Job A, Job B and so on. Documents say "the builder", not his name. `kit/redaction.py` is the one redaction step; every writer uses it, and nothing is written while a listed name survives.
 
@@ -60,6 +63,8 @@ python3 -m pytest tests/         # run the kit's tests
 - Lead replies with direct answers to what he asked, then action items, then explanation. Work already done goes last and collapsed. No walls of text.
 - Bring choices as short numbered or clickable options with a recommendation.
 - Push back with a one-line reason when a request is weaker than an alternative. Label your own ideas Proposed and your readings Inferred.
+- Nothing is sent or shown to the builder without the owner's OK. Anything for the builder is labelled a draft estimate, never a bid or a price.
+- Do not share the owner's Claude account with the builder or build his access on it.
 - Do not fill in facts only the builder knows. Add them to `docs/builder/questions.md`.
 - Warn before anything that will take a long time or a lot of usage.
 - He often dictates; read past transcription slips and ask in one line if a slip could change the meaning.
