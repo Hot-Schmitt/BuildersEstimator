@@ -1,6 +1,6 @@
 # Build, design and review standards
 
-**Moved here Nov 18, 2026** from project document "09 Estimator - Build, design and review standards". The text is unchanged apart from cross-references (see the change log at the foot).
+**Moved here Nov 18, 2026** from project document "09 Estimator - Build, design and review standards". See the change log at the foot for what changed on the way and after.
 **Reading the references:** `method.md` and `format.md` are the two files beside this one. "doc NN" means a project document that is not in this repository yet: 01 Start here · 04 Builder estimate format and price list seed · 05 Job A actual costs · 07 Working log (to become `docs/history/`) · 11 Builder cost code list. In this repository, decisions are recorded in `decisions/` and mistakes in `docs/history/mistakes.md` (see `AGENTS.md`).
 
 **Purpose:** how the estimator software is built, how it should look and feel, and how every big piece of work is checked before the user sees it. Written to avoid what went wrong on an earlier build (Said): lost context, broken databases, duplicate code and files, inconsistent design, fixes that broke other parts, and documents that contradicted each other.
@@ -20,7 +20,7 @@
 
 ## 2. Storage rules
 - One copy of each plan PDF. Page images are temporary and deleted after reading.
-- Each estimate version is one small data file (tens of KB). **Changed (Said, Nov 17):** changes save into the current version as he types, and each change is logged in that version's change list. A new version is made only by Duplicate or Finalize. A finalized or signed version is never changed.
+- Each estimate version is one small data file (tens of KB). **Changed (Said, Nov 17):** changes save into the current version when he leaves the box, not on each keystroke (Said, Nov 18), and each change is logged in that version's change list. A new version is made only by Duplicate or Finalize. A finalized or signed version is never changed.
 - Job folders are named by job (address only on the user's own computer, never in project documents).
 - No duplicate exports kept: Excel and CSV are made when asked, not stored.
 - Check the folder size after every test and report it if it grows unexpectedly.
@@ -29,6 +29,10 @@
 **Order of work (Said, from the operations app project):** first layout, the information shown, navigation, statuses and actions. Only then fonts and colours.
 
 **Laptop first (Said, Nov 16, 10:20 pm).** The screens are a web app designed for a laptop first. The phone layout is a second pass.
+
+**Do not force him (Said, Nov 17).** The tool does not force him to work in a way, or use the system in a way, that he does not want, within our limits.
+
+**Simple on the surface (Said, Nov 18).** Every proposal is checked against this: not overly complicated, yet still very accurate; simple on the surface, intuitive to use, and not busy for a man of about 50.
 
 **What "premium" means here (Proposed, except where marked Said):**
 - Calm and uncluttered. One clear thing per screen; detail opens on demand.
@@ -109,3 +113,4 @@ Hand-off steps are in doc 01. The starter line is given in a code block the user
 | Nov 16, 2026 (9 pm) | Section 3: three rules added at the user's request (screen wording checked against industry terms, with a wording table and no notes inside a sketch; one spacing scale and one button layout rule; a locked sketch kept as its own source with control ids and a matching control list). The confidence line now records two flags, off by default. The "always visible" line is marked under review. This change log added |
 | Nov 17, 2026 (10:35 am) | Brought into line with what the user said on Nov 16 and 17 (doc 07 parts 3 and 4). Section 2: the version rule changed (changes save into the current version; a new version only by Duplicate or Finalize). Section 3: laptop first; the "always visible" line settled ("Double-check these first" starts on); automatic saving; eye drawn to what needs attention; buttons that look like buttons; the build note on premium buttons, colour theme and icons; "estimated range" added to the fixed wording; screens drawn at real size on a canvas; "works on a phone and a laptop" reordered. Section 4: self-check uses real screenshots at three widths; the two-lane screen review added. Section 7: the cost of a two-lane review. Not added: rules that are still only Proposed in doc 07 section 8 (sample figures from one made-up data set; walking the five tasks before showing a layout; carrying earlier accepted fixes into a redraw) |
 | Nov 18, 2026 | Moved into the repository as `docs/standards.md` from project document 09. Title lost its number; a note on reading the references added at the top; "doc 03" now reads `method.md`. No rule changed. **Known to be behind, not changed here** (working log part 5): section 3 is owed the "do not force him to work a way he does not want" principle (Said, Nov 17) and the "simple on the surface, not busy" standard (Said, Nov 18); section 2's "as he types" is now "when he leaves the box" (lock 7, Nov 18) |
+| Nov 18, 2026 (later) | Brought into line with working log part 5, approved by the user ("lock all your recommendations"). Section 2: a change saves when he leaves the box. Section 3: two standing lines added in the user's words, "do not force him" (Nov 17) and "simple on the surface" (Nov 18). The points listed as behind in the row above are now closed |

@@ -1,9 +1,9 @@
 # Method: how a draft estimate gets made, marked and improved
 
-**Moved here Nov 18, 2026** from project document "03 Estimator - Method". The text is unchanged apart from cross-references (see the change log at the foot).
+**Moved here Nov 18, 2026** from project document "03 Estimator - Method". See the change log at the foot for what changed on the way and after.
 **Reading the references:** `format.md` and `standards.md` are the two files beside this one. "doc NN" means a project document that is not in this repository yet: 01 Start here · 02 Research · 04 Builder estimate format and price list seed · 05 Job A actual costs · 06 Questions for the builder (to become `docs/builder/questions.md`) · 07 Working log (to become `docs/history/`).
 
-**Status:** Proposed, Nov 16, 2026. Built from the research in doc 02 and the builder's files. Change it when a test shows something better; note the change in doc 07. Changed Nov 16 after the first blind draft (approved by the user): overlapping lines in step 4, "plan minimum" in steps 5 and 7, and where test answers are kept. Changed Nov 16 (approved by the user): step 8 now describes the on-screen estimate, with Excel and CSV as exports.
+**Status:** Proposed, Nov 16, 2026. Brought into line with standing decisions Nov 18 (change log at the foot). Built from the research in doc 02 and the builder's files. Change it when a test shows something better; note the change in doc 07. Changed Nov 16 after the first blind draft (approved by the user): overlapping lines in step 4, "plan minimum" in steps 5 and 7, and where test answers are kept. Changed Nov 16 (approved by the user): step 8 now describes the on-screen estimate, with Excel and CSV as exports.
 
 ## The idea in one paragraph
 An estimate is three questions: **what is being built** (scope), **how much of it** (quantity) and **what it costs him** (price). Each goes wrong in a different way, so each is handled, marked and corrected separately. The draft is always his lines, his order, his prices. The tool's job is to fill what it can prove, mark what it cannot, and point him at the money that is least certain.
@@ -61,6 +61,7 @@ The core facts for most jobs: floor area by level · footprint and perimeter · 
 - Start from his checklist (doc 04). For each line decide: **In**, **Out**, or **Ask**.
 - Give a reason for every In and every Ask ("two baths on plan", "site plan shows new fence").
 - A line he usually carries but the plans do not show goes to **Ask**, not Out.
+- **Estimates made from a template (Said, locked Nov 16).** A line item in the chosen template starts In, with the reason "in your template" and a blank quantity until the plans give one. Lines outside the template are shown as a count with a link, not as a wall of Ask. A dropped line is measured against the template the estimate records, not against his full checklist (`format.md`, section 11, item 6). Anything the plans show that is outside the template is listed as "Not in your template" for his answer; never added silently.
 - **Overlapping lines (approved Nov 16).** His sheet often has two or three lines for the same work (a lump sum and a per-unit line; a main bid and a part bid; a heading he prices directly and the lines under it). Do not mark several of them In. Show them as one group with one question: "which line do you use for this?" If his usual line for that work is recorded, put the draft on that line and name the others in the note. Until he confirms it, a recorded usual line from one job is a note, and the group stays Ask.
 - Things the plans show that are not on his checklist go in a separate "not on your list" section. Never slip them into his divisions unannounced.
 - This step matters more than any other. A missed line costs more than a mismeasured one.
@@ -108,6 +109,7 @@ Each line gets two marks, then the lower of the two becomes the line's mark.
 **Automatic Low**, whatever else is true: anything hidden (existing conditions), anything the client has not chosen, anything on the Ask list, site work on a job with no site plan.
 
 **What he sees**
+**Changed (Said, Nov 16, 9 pm; `standards.md`, section 3):** all three marks are still worked out and stored on every line, but the screen shows two flags, High and Low, off by default and turned on in settings. Medium is stored and not shown. "Check these first" appears on screen as "Double-check these first"; it starts on and he can switch it off. The list below is what the marks carry; the screen shows it within those limits.
 - A colored cell and a word on every line: green High, yellow Medium, red Low. Always the word as well as the color.
 - A one-line reason on every Medium and Low.
 - A summary at the top by division: total dollars, and how many of those dollars are High, Medium and Low.
@@ -119,11 +121,11 @@ Do not show percentages like "87% confident". They look exact and are not. Three
 ## Step 8 · The draft he receives
 Changed Nov 16 (Said: the output is a modern on-screen estimate; Excel and CSV are exports only).
 - An on-screen estimate, not an Excel file. It keeps his lines, his order, his units and his divisions. Sub-lines collapse under their division.
-- Always visible at the top: the total, the range and "check these first".
-- On every line: the confidence word and colour. One tap on a number shows the reason, the source of the quantity and the price date.
+- Always visible at the top: the draft total, the estimated range and what the total leaves out. "Double-check these first" starts on.
+- On every line, when he has the flags turned on: the confidence word and colour, High or Low. One tap on a number shows the reason, the source of the quantity and the price date.
 - A cover section: job type, how defined the job is, what was missing, assumptions and exclusions.
 - A job facts view, so he can see every measurement and where it came from.
-- Nothing is locked while he is working on it. He can overwrite any number on screen. Every save is kept as a new version with its list of changes (`format.md`, section 7), which is what step 9 learns from.
+- Nothing is locked while he is working on it. He can overwrite any number on screen. **Changed (Said, Nov 17; decision 0001):** his changes save into the current version, when he leaves the box (Said, Nov 18), and each change is logged in that version's change list (`format.md`, section 7), which is what step 9 learns from. A new version is made only by Duplicate or Finalize; a final or signed version is never changed.
 - Excel in his layout and CSV are exports, made on request from the same data and not stored.
 - The data behind the screen is the shared estimate format (`format.md`). The screen follows the design standard in `standards.md`, section 3.
 
@@ -179,3 +181,4 @@ When a job finishes and real costs are in, repeat the comparison against actual 
 | Date | What changed |
 |---|---|
 | Nov 18, 2026 | Moved into the repository as `docs/method.md` from project document 03. Title lost its number; a note on reading the references added at the top; "doc 09" and "doc 10" now read `standards.md` and `format.md`. No rule changed. **Known to be behind, not changed here:** step 8 still says every save is a new version (decision 0001 replaced that); step 7's "what he sees" still shows three marks (the screens show two flags, `standards.md` section 3); step 4 is owed an update (working log part 5, section 3) |
+| Nov 18, 2026 (later) | Brought into line with standing decisions, approved by the user ("lock all your recommendations"). Step 4: the template rule added (self-review decision 3, locked Nov 16). Step 7: a note that the screen shows two flags, off by default, with Medium stored and not shown; the three marks themselves are unchanged. Step 8: what is always visible now matches `standards.md`; the confidence word shows when flags are on; saving follows decision 0001 and the Nov 18 keyboard lock. The three "known to be behind" points in the row above are now closed |
