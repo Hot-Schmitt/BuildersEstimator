@@ -20,8 +20,7 @@ The project is moving from a claude.ai Project into this repository. Nothing of 
 5. More blind tests before the builder relies on it.
 
 ## Waiting on the owner
-- How the scripts come across: copied from his computer, or re-created from the project copies.
-- Confirm the reading of decision 0009 (built for this builder only, no settings layer for other builders).
+- Nothing right now.
 
 ## Owed by the agent
 - Review findings not yet answered: every item in `docs/history/2026-11-19-full-review.md` is fixed, turned into a decision or a question for the builder, or parked with a reason.

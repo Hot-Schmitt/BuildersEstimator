@@ -11,7 +11,7 @@ Each row links to the decision's own file, which carries the reason, the alterna
 
 | # | Decision | Decided | By |
 |---|---|---|---|
-| [0009](decisions/0009-built-for-this-builder-not-builders-in-general.md) | The tool is built for this one builder, not for builders in general | 2026-11-19 | owner |
+| [0009](decisions/0009-this-builder-first-his-habits-kept-as-settings.md) | This builder first, with his habits kept as settings and not hard-wired | 2026-11-19 | owner |
 
 ## Pricing, markup and tax
 
