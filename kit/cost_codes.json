@@ -1,0 +1,563 @@
+{
+"note": "The builder's cost code list, read from his Job A cost workbook by read_cost_workbook.py (Checked). Categories start as his divisions (names Inferred). Whether this is his standing list is doc 06 question 27.",
+"codes": [
+{
+"code": "1100",
+"name": "Fees and Services",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1110",
+"name": "Builders Risk Insurance",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1150",
+"name": "Termite Protection",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1210",
+"name": "Daily project clean-up",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1220",
+"name": "Final Project Cleanup",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1230",
+"name": "Window Cleanup",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1240",
+"name": "Furniture Movement",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1250",
+"name": "Dumpsters",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1300",
+"name": "Material Pick-up and Handling",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1400",
+"name": "Equipment Rental",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1500",
+"name": "Supervision",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1700",
+"name": "Jobsite Protection",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1750",
+"name": "Portable Toilet",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1760",
+"name": "Erosion Control",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "1800",
+"name": "Punchlist",
+"category": "General conditions",
+"active": true
+},
+{
+"code": "2200",
+"name": "Demolition Exterior",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "2300",
+"name": "Demolition Interior",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "2500",
+"name": "Earthwork and Excavation",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "2700",
+"name": "Drain Lines",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "2800",
+"name": "Landscaping",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "2850",
+"name": "Fence",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "2900",
+"name": "Retaining Wall",
+"category": "Site work and demo",
+"active": true
+},
+{
+"code": "3200",
+"name": "Concrete Ftgs & Piers",
+"category": "Concrete",
+"active": true
+},
+{
+"code": "3300",
+"name": "Concrete Walls",
+"category": "Concrete",
+"active": true
+},
+{
+"code": "3420",
+"name": "Slab on Grade",
+"category": "Concrete",
+"active": true
+},
+{
+"code": "3440",
+"name": "Garage Slabs",
+"category": "Concrete",
+"active": true
+},
+{
+"code": "3450",
+"name": "Sidewalk",
+"category": "Concrete",
+"active": true
+},
+{
+"code": "3460",
+"name": "Driveway",
+"category": "Concrete",
+"active": true
+},
+{
+"code": "4100",
+"name": "Masonry Block",
+"category": "Masonry",
+"active": true
+},
+{
+"code": "4400",
+"name": "Masonry Brick",
+"category": "Masonry",
+"active": true
+},
+{
+"code": "4500",
+"name": "Stucco",
+"category": "Masonry",
+"active": true
+},
+{
+"code": "4700",
+"name": "Stonework",
+"category": "Masonry",
+"active": true
+},
+{
+"code": "5100",
+"name": "Metal Beams and Columns",
+"category": "Metals",
+"active": true
+},
+{
+"code": "5700",
+"name": "Metal Handrails",
+"category": "Metals",
+"active": true
+},
+{
+"code": "6080",
+"name": "Framing General",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "6120",
+"name": "Sister Floors",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "6500",
+"name": "Trim Interior",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "6725",
+"name": "Stair - Frame",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "6750",
+"name": "Stair- Trim, ballusters, treads",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "6820",
+"name": "Paneling & Wainscoting",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "6870",
+"name": "Columns - interior",
+"category": "Framing and carpentry",
+"active": true
+},
+{
+"code": "7100",
+"name": "Waterproofing",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7200",
+"name": "Insulation",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7310",
+"name": "Roofing Standard",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7330",
+"name": "Roofing Metal",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7380",
+"name": "Gutters Downspouts",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7410",
+"name": "Cornice Soffit and Fascia",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7450",
+"name": "Exterior Trim",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7480",
+"name": "Exterior Columns",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7500",
+"name": "Siding",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7550",
+"name": "House Wrap",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7590",
+"name": "Stucco",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7600",
+"name": "Front Porch",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "7750",
+"name": "Pull Down Stairs",
+"category": "Roofing, siding, insulation",
+"active": true
+},
+{
+"code": "8100",
+"name": "Doors Exterior",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8200",
+"name": "Garage Doors",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8300",
+"name": "Doors Interior",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8500",
+"name": "Windows",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8700",
+"name": "Skylights",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8800",
+"name": "Door and Window Hardware",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8900",
+"name": "Window Screens",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "8950",
+"name": "Screen Porch",
+"category": "Doors and windows",
+"active": true
+},
+{
+"code": "9200",
+"name": "Drywall",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "9300",
+"name": "Ceramics/Stone Tile",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "9500",
+"name": "Hardwood Floors",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "9600",
+"name": "Carpet",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "9910",
+"name": "Interior Paint",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "9920",
+"name": "Exterior Paint",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "9950",
+"name": "Wallcovering",
+"category": "Finishes",
+"active": true
+},
+{
+"code": "10300",
+"name": "Fireplace Prefab",
+"category": "Specialties",
+"active": true
+},
+{
+"code": "10310",
+"name": "Chimney shroud",
+"category": "Specialties",
+"active": true
+},
+{
+"code": "10500",
+"name": "Attic Access Stairs",
+"category": "Specialties",
+"active": true
+},
+{
+"code": "10600",
+"name": "Shelving",
+"category": "Specialties",
+"active": true
+},
+{
+"code": "10800",
+"name": "Shower Door",
+"category": "Specialties",
+"active": true
+},
+{
+"code": "10900",
+"name": "Mirrors",
+"category": "Specialties",
+"active": true
+},
+{
+"code": "12100",
+"name": "Kitchen Cabinets",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12150",
+"name": "Bath Cabinets",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12190",
+"name": "Cabinet Hardware",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12210",
+"name": "Window Well",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12240",
+"name": "Counters - Kitchen",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12260",
+"name": "Counters - Bath",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12530",
+"name": "Mantels",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12730",
+"name": "Casework",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "12900",
+"name": "Toilet Accessories",
+"category": "Cabinets and countertops",
+"active": true
+},
+{
+"code": "14100",
+"name": "HVAC",
+"category": "HVAC",
+"active": true
+},
+{
+"code": "15100",
+"name": "Plumbing",
+"category": "Plumbing",
+"active": true
+},
+{
+"code": "16100",
+"name": "Electrical",
+"category": "Electrical",
+"active": true
+},
+{
+"code": "16700",
+"name": "Communications",
+"category": "Electrical",
+"active": true
+},
+{
+"code": "16800",
+"name": "Video and Sound",
+"category": "Electrical",
+"active": true
+},
+{
+"code": "17100",
+"name": "Appliances",
+"category": "Appliances",
+"active": true
+},
+{
+"code": "18400",
+"name": "Hardware store A - not cost plus",
+"category": "Miscellaneous",
+"active": true
+},
+{
+"code": "18500",
+"name": "Hardware store B - not cost plus",
+"category": "Miscellaneous",
+"active": true
+},
+{
+"code": "18600",
+"name": "Warranty Work",
+"category": "Miscellaneous",
+"active": true
+}
+]
+}
