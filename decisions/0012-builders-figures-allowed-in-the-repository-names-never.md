@@ -5,7 +5,7 @@ status: accepted
 date: 2026-11-19
 decided_by: owner
 area: data
-supersedes:
+supersedes: 0057
 superseded_by:
 ---
 
@@ -29,8 +29,8 @@ third-party identifying data, stays out.
 only.** This was the rule in the old project documents (the start page, the screens
 build plan and the current-state document). It was replaced on 2026-11-18, when the
 owner approved figures and wording, and confirmed on 2026-11-19 after the full review
-found the two rules in conflict. The older rule has no decision file of its own; when
-it is backfilled, mark it superseded by this one.
+found the two rules in conflict. The older rule is decision 0057, backfilled on
+2026-11-19 and marked superseded by this one.
 
 ## What it costs us
 

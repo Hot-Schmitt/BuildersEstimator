@@ -5,7 +5,7 @@ status: accepted
 date: 2026-11-17
 decided_by: owner
 area: format
-supersedes:
+supersedes: 0031
 superseded_by:
 ---
 
@@ -62,7 +62,6 @@ On when saving applies:
 
 - Shared estimate format, `docs/format.md` — this is one of the twelve changes
   approved for version 0.5, which is built in one step.
-- The earlier "every save makes a version" rule is not yet its own decision file.
-  When it is backfilled, set its `status` to `superseded` and its `superseded_by` to
-  `0001`, and set this file's `supersedes` to its number.
+- Decision 0031: the earlier "every save makes a new version" rule, which this
+  supersedes (backfilled 2026-11-19).
 - The operations app must be told when 0.5 ships; the format is a contract with it.
