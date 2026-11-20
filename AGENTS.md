@@ -16,7 +16,8 @@ Two people are involved. **The owner** is who you talk to; he decides what the t
 2. Read `STATUS.md` — where we are, what is next, what is waiting on the owner.
 3. Read `CURRENT.md` — the decisions that stand right now, generated from `decisions/`. It is the full list.
 4. Read only the decision files for the area you are working in (`grep -l "area: screens" decisions/*.md`). Screen behaviour is also filed under pricing, format and process, so search `CURRENT.md` by keyword as well.
-5. Read `docs/method.md` before any estimating, `docs/standards.md` before any build or design work, `docs/format.md` before writing or reading an estimate file.
+5. For what a screen, button, field or rule is: `spec/`. Do not read the whole folder. Find the id in `spec/INDEX.md`, open the one file on that line, and follow its `decisions:` for the why. `spec/OPEN.md` lists what is still undecided. `spec/README.md` explains the ids.
+6. Read `docs/method.md` before any estimating, `docs/standards.md` before any build or design work, `docs/format.md` before writing or reading an estimate file.
 
 Do not read the whole of `decisions/` or the history in `docs/history/`. Search them when you need to know why something was decided.
 
@@ -57,8 +58,12 @@ Then run `python3 tools/build_index.py` to regenerate `CURRENT.md`. **Never hand
 
 ```
 python3 tools/build_index.py     # regenerate CURRENT.md from decisions/
-python3 -m pytest tests/         # run the kit's tests
+python3 -m pytest tests/         # run the kit's tests and the spec tools' tests
+python3 tools/build_spec_index.py   # regenerate spec/INDEX.md and spec/OPEN.md
+python3 tools/check_spec.py         # check spec/ for breaks (add --gate before a build)
 ```
+
+Run the last two after any change in `spec/`. They need PyYAML (`pip install pyyaml`). **Never hand-edit `spec/INDEX.md` or `spec/OPEN.md`.**
 
 ## Working with the owner
 
@@ -83,6 +88,7 @@ One home per thing. A document states a rule only if it owns it; every other men
 
 - Hard rules: this file. Estimating rules: `docs/method.md`. Build, design and review rules: `docs/standards.md`. Who reviews and what each is asked: `docs/reviewers.md`.
 - A choice the owner made: a file in `decisions/`.
+- What a screen, control, field, rule, story or edge case is: its record in `spec/`, by id.
 - Stage, next steps, what is waiting: `STATUS.md`.
 - A job's test results and the builder's corrections: that job's folder in `jobs/`.
 - Mistakes: `docs/history/mistakes.md`.

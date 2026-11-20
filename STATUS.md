@@ -2,7 +2,7 @@
 
 **Purpose:** the one page that says what stage the project is at, what is next, what is waiting on the owner and what the agent owes. Written by hand; update it whenever any of those change. Decisions themselves live in `decisions/` and are listed in `CURRENT.md`.
 
-**Last updated:** Nov 19, 2026.
+**Last updated:** Nov 20, 2026.
 
 ## Stage
 The project is moving from a claude.ai Project into this repository. Nothing of the screens is built. One job (Job A) has been tested; it is no longer blind.
@@ -14,6 +14,7 @@ The project is moving from a claude.ai Project into this repository. Nothing of 
 - First pass of moving the documents, Nov 19: the questions for the builder are in `docs/builder/questions.md` (ten owed questions added, 39 to 48), and the screen design document is in `docs/screens/laptop-screens-design.md` (moved as it was; the lines that are behind the decisions are listed at its top). The canvas drawings were not copied: `docs/screens/canvas.md` points to them and says why (Decided by Claude; reversible).
 - A method audit by three fresh researchers was run on Nov 19 at the owner's request (`docs/history/2026-11-19-method-audit/`): a cold audit of this repository, method and documentation structure, and market research on estimating software. Findings are not decisions.
 - A full review by five fresh reviewers was run on Nov 19 (`docs/history/2026-11-19-full-review.md`).
+- The `spec/` folder is set up and empty (Nov 20): the id scheme and how to use it in `spec/README.md`, a blank of each kind in `spec/templates/`, an index builder and a checker in `tools/`. Decided by Claude, reversible: the data files are YAML, which adds one dependency (PyYAML) for these two tools only; and a missing acceptance case or an open item fails the check only on something locked, or with `--gate`, so the folder can be checked while phases 1 to 4 fill it.
 
 ## Next, in order
 The owner approved the phase path on Nov 19 (decision 0067). Phases 0 to 6 are set out in that decision.
@@ -21,7 +22,7 @@ The owner approved the phase path on Nov 19 (decision 0067). Phases 0 to 6 are s
 **Now: phase 0, close the records.**
 1. Fix the contradictions and dangling references listed in `docs/history/2026-11-19-method-audit/repository-audit.md` (two instruction sets, rules repeated with different wording, "doc NN" pointers, `README.md` describing folders that are empty). *Done on Nov 19 for the documents. What is left is listed under "Owed by the agent" and "Waiting on the owner".*
 2. Put the five proposed decisions (0061, 0063 to 0066) and decision 0026 to the owner in one short batch. *Done on Nov 19: all five approved, 0065 for drawings only. Decision 0026 was replaced by 0072.*
-3. Create the empty `spec/` folder, its templates and its checking script, from `method-and-structure.md`, section 3.
+3. Create the empty `spec/` folder, its templates and its checking script, from `method-and-structure.md`, section 3. *Done on Nov 20: `spec/README.md`, eight blank templates, `tools/check_spec.py` and `tools/build_spec_index.py`, with tests. Both run clean on the empty folder.*
 4. Give every finding in the two review documents one status: fixed, a decision, a question, or parked with a reason.
 5. Sort `docs/builder/questions.md` into: the owner can answer (general trade practice); only the builder can answer and it blocks design; can wait. Bring the short blocking list to the owner (decision 0069).
 
@@ -44,4 +45,5 @@ The owner approved the phase path on Nov 19 (decision 0067). Phases 0 to 6 are s
 - `docs/builder/questions.md`: questions 18 and 19 are out of date (Excel output, colored cells) and wait on the owner's rewording; questions from the full review (what he sends a client today, allowances, alternates) are not added yet.
 - Parked by decision 0072: comparing the tool's own counts with vendors' quantities, once the tool has collected both and its counts are tested (decision 0071).
 - Left from the records clean-up (phase 0, step 1): comments and generated text in seven kit scripts still cite project document numbers (fixed with the code tidy-up the audit lists, not before); `docs/format.md` keeps its version 0.4 body until 0.5 is written; history citations such as "doc 07 part 4" stay as evidence until the old working log is moved in; `docs/screens/canvas.md` still says the design document was written from an older canvas version.
+- Two checks of `tools/check_spec.py` wait for their phase: control ids in a locked drawing's code against the controls table (phase 5), and acceptance ids against test names (the build).
 - `docs/format.md` says estimate files are stored compressed; the format module writes plain JSON. Settle when 0.5 is written.

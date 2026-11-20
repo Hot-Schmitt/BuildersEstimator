@@ -1,0 +1,24 @@
+# Template for spec/fields/<object>.yaml: the data dictionary, one file per object.
+# A flat list. Every record starts with id. Text values in quotes.
+
+- id: F-OBJ-NAME
+  label: W-                 # the on-screen word, by wording id
+  note: ""                  # what it is, when to use it, when NOT to. This is the help text.
+  type: ""                  # money | quantity | percent | text | choice | date | id | flag | record
+  unit: ""                  # USD per unit, SF, %, none
+  precision: ""             # stored and shown, with rounding
+  allowed: ""               # range or list
+  required_when: ""
+  default: ""
+  source: []                # plan-read | template | price-history | vendor-sub-pricing | builder | computed
+  editable_by: ""           # who, and in which states
+  validation: []            # R- ids
+  stored_at: ""             # object path in the format, with the format version
+  shown_on: []              # C- ids; each of those controls must list this field back
+  logged_as: ""             # change kind in the change list, or "not logged"
+  exports: ""               # where it lands in Excel / CSV / client copy / operations app
+  privacy: ""               # none | builder-figure | real-name
+  decisions: []             # D-NNNN
+  provenance: ""            # said | checked | inferred | proposed
+  status: ""                # open | proposed | locked | parked | retired
+  open: ""                  # anything undecided, in one line, with a Q- or E- id

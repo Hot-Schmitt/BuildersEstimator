@@ -1,0 +1,16 @@
+# Template for spec/rules/<area>.yaml: one file per area.
+# Areas: SAVE, FIN (finalize), TAX, MKP (markup), CTG (contingency), PRC (pricing a
+# line item), VSP (vendor or sub pricing), SCP (scope), QTY, CONF (confidence),
+# VER (versions), TPL (templates), CLI (client copy), PRIV (privacy).
+# A flat list. Every record starts with id. Text values in quotes.
+
+- id: R-AREA-NNN
+  rule: ""                  # one sentence, testable
+  kind: ""                  # block | warn | compute | default | permission | privacy
+  applies_to: []            # A-, F-, O- ids
+  enforced_in: ""           # shared check | screen | both | process
+  message: W-               # the words he sees, if any
+  acceptance: []            # AC- ids
+  cases: []                 # only when no screen owns the case: - id: AC-AREA-NN / case: "Given … when … then …"
+  decisions: []             # D-NNNN; a locked rule must cite one
+  status: ""                # open | proposed | locked | parked | retired

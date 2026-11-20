@@ -11,12 +11,13 @@ This repository holds the code, the decisions behind it, and the test results. I
 | `STATUS.md` | Where we are, what is next, and what is waiting on the owner. |
 | `CURRENT.md` | Every decision that stands right now. Generated — don't edit it by hand. |
 | `decisions/` | One file per decision, numbered. Nothing here is ever deleted; a replaced decision is marked superseded and points at what replaced it. |
+| `spec/` | The specification: every screen, button, field, rule, story and edge case, each with an id and one home. `spec/README.md` explains it. Empty until the mapping phase fills it. |
 | `docs/` | How an estimate is made (`method.md`), the shared data format (`format.md`), build and design standards (`standards.md`), screen designs (`screens/`), what we know and still need from the builder (`builder/`). |
 | `docs/history/` | The record of mistakes, and the reviews and audits that have been run. The old working log has not been moved here yet. |
 | `jobs/` | One folder per job (Job A, Job B and so on) for its facts, test results and the builder's corrections, redacted. Empty for now: Job A's data still sits in `kit/`. |
 | `kit/` | The scripts: the estimate format and its check, the draft writer, the importer, scoring. |
-| `tests/` | One wrapper that runs the kit's two test scripts, which live in `kit/`. They run on made-up data, never real jobs. |
-| `tools/` | Housekeeping scripts, including the one that builds `CURRENT.md`. |
+| `tests/` | One wrapper that runs the kit's two test scripts, which live in `kit/`, and the tests for the spec tools. They run on made-up data, never real jobs. |
+| `tools/` | Housekeeping scripts: the one that builds `CURRENT.md`, and the two that index and check `spec/`. |
 | `AGENTS.md` | Instructions for AI agents working in here. |
 
 ## Reading a decision
