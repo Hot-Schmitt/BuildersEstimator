@@ -12,7 +12,8 @@ superseded_by:
 ## Decision
 
 On an estimate that has already been created, every change the builder makes saves
-into the version he is working on, as he types. Each change is still written to that
+into the version he is working on, when he leaves the box (decision 0008; this file
+first said "as he types"). Each change is still written to that
 version's change list, so the system can learn from his edits.
 
 A new version is created in only two ways:

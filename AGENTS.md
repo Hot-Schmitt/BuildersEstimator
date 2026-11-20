@@ -2,6 +2,8 @@
 
 Instructions for any AI agent working in this repository. Read this first, every session.
 
+This file is the only instruction set. The instructions and documents of the claude.ai project this work started in are frozen history; where they differ from this repository, the repository wins.
+
 ## What this is
 
 An estimating helper for a luxury home builder in Atlanta. It reads a job's plans and drafts about 80% of his estimate, using his own line items and his own prices, and flags what it is not confident about. The output is an on-screen estimate, laptop first. Signed estimates hand off to a separate operations app through one shared estimate format.
@@ -12,8 +14,8 @@ Two people are involved. **The owner** is who you talk to; he decides what the t
 
 1. Read this file.
 2. Read `STATUS.md` — where we are, what is next, what is waiting on the owner.
-3. Read `CURRENT.md` — the decisions that stand right now, generated from `decisions/`. Until `STATUS.md` says the backfill is finished, it is not the full list.
-4. Read only the decision files for the area you are working in (`grep -l "area: screens" decisions/*.md`).
+3. Read `CURRENT.md` — the decisions that stand right now, generated from `decisions/`. It is the full list.
+4. Read only the decision files for the area you are working in (`grep -l "area: screens" decisions/*.md`). Screen behaviour is also filed under pricing, format and process, so search `CURRENT.md` by keyword as well.
 5. Read `docs/method.md` before any estimating, `docs/standards.md` before any build or design work, `docs/format.md` before writing or reading an estimate file.
 
 Do not read the whole of `decisions/` or the history in `docs/history/`. Search them when you need to know why something was decided.
@@ -61,13 +63,29 @@ python3 -m pytest tests/         # run the kit's tests
 ## Working with the owner
 
 - Lead replies with direct answers to what he asked, then action items, then explanation. Work already done goes last and collapsed. No walls of text.
-- Bring choices as short numbered or clickable options with a recommendation.
-- Push back with a one-line reason when a request is weaker than an alternative. Label your own ideas Proposed and your readings Inferred.
+- Bring choices as short numbered or clickable options with a recommendation. For each: the decision he needs to make, why it matters, the pros and cons, and the recommendation.
+- End every reply with the decision that is his to make, as clickable options where the tool allows, even when it is only "go". The one exception is a reply that ends with a hand-off (Said, Nov 19, 2026).
+- The owner decides what the tool does and anything the builder sees. The agent decides the craft (wording, layout detail, how a test is run, code structure) and reports notable calls so they can be reversed.
+- An idea he gives as an example is context, not a requirement.
+- New feature ideas are noted and parked unless he says to include them. Keep the tool small.
+- One step at a time. Edit rather than regenerate.
+- Push back with a one-line reason when a request is weaker than an alternative. Label your own ideas Proposed and your readings Inferred. In documents, label lines Said (the owner or the builder), Checked (verified against a file or a dated source), Inferred or Proposed.
 - Nothing is sent or shown to the builder without the owner's OK. Anything for the builder is labelled a draft estimate, never a bid or a price.
 - Do not share the owner's Claude account with the builder or build his access on it.
 - Do not fill in facts only the builder knows. Add them to `docs/builder/questions.md`.
 - Warn before anything that will take a long time or a lot of usage.
+- Hand off to a fresh chat at a good stopping point, not after every small run (decision 0056): update `STATUS.md` first, then give the starter line in a copy-ready code block.
 - He often dictates; read past transcription slips and ask in one line if a slip could change the meaning.
+
+## Where things are recorded
+
+One home per thing. A document states a rule only if it owns it; every other mention is a pointer.
+
+- Hard rules: this file. Estimating rules: `docs/method.md`. Build, design and review rules: `docs/standards.md`. Who reviews and what each is asked: `docs/reviewers.md`.
+- A choice the owner made: a file in `decisions/`.
+- Stage, next steps, what is waiting: `STATUS.md`.
+- A job's test results and the builder's corrections: that job's folder in `jobs/`.
+- Mistakes: `docs/history/mistakes.md`.
 
 ## Mistakes
 
