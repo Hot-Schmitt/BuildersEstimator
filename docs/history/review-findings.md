@@ -154,7 +154,7 @@ The "short version" at its top is a summary of the findings below and has no row
 | RA-4 | The one screen document is knowingly wrong; keep a picture of each drawing at lock | Parked | Same as FR-1.4, phase 5 |
 | RA-5 | Open items have no single list; the full review's findings are untracked | Fixed | This page for review findings; `spec/OPEN.md` for the specification; `STATUS.md` for the rest |
 | RA-6a | The builder's answers are the hidden critical path | Decision 0069 | |
-| RA-6b | Mark each question with what it blocks; record what has been sent; mark decisions that rest on an unconfirmed reading | Parked | Phase 0, step 5, which is next |
+| RA-6b | Mark each question with what it blocks; record what has been sent; mark decisions that rest on an unconfirmed reading | Parked | Done on Nov 20: each question placed, with what it holds up and a "Sent" column (`docs/builder/questions.md`, "The sort"). Left: the `assumes:` mark on decisions 0002 to 0004, added when the builder answers items C and D or phase 1 opens, whichever is first |
 | RA-7a | One owner per rule | Fixed | Same as RA-D |
 | RA-7b | Say who decides what | Fixed | `AGENTS.md`: the owner decides what the tool does; the agent decides craft and reports it |
 | RA-7c | Rules marked Proposed inside documents have no path to a decision (the method's own status, pass marks, reviewer briefs, "premium", the cost code picker) | Parked | Each is put to the owner in the phase that first relies on it: pass marks on the test track, the picker and "premium" in phase 5, reviewer briefs with RA-10a |

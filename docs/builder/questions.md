@@ -7,6 +7,42 @@ Facts only he can answer. Never guessed. Log each answer here with the date and 
 Ordered by how much each one changes the work. The first six are needed before step 2.
 This page quotes figures from his Job A estimate, so it is not opened during a blind run on Job A.
 
+## The sort (Nov 20, 2026; phase 0, step 5; decision 0069)
+
+Every question has one of four places. The sort is Claude's (Proposed) until the owner OKs it. **Nothing has been sent to the builder.** When a question is sent, its date goes in the "Sent" column of the short list.
+
+| Place | Count | Questions |
+|---|---|---|
+| **For the builder now**: only he knows, and design waits on it | 14, asked as 7 | 1, 5, 6, 10, 13, 25, 27, 40, 42, 44, 49, 51, 52, 53 |
+| **For the owner**: general trade practice; his answer is recorded as the owner's and checked with the builder later | 12 | 2, 12, 14, 16, 17, 39, 41, 43, 45, 46, 47, 50 |
+| **Can wait**: only the builder knows, but no design step waits on it | 26 | 3, 4, 7, 8, 9, 11, 15, 20, 21, 22, 23, 24, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 48, 54 |
+| **Out of date**: proposed to retire, the owner decides | 2 | 18, 19 |
+
+### The short list for the builder (wording Proposed; goes only with the owner's OK)
+
+| | Ask | Covers | What waits on it | Sent |
+|---|---|---|---|---|
+| A | On a typical job, which parts of the estimate do you always do yourself, which line items are always a sub's bid, and which quantities come from a supplier (the lumber list, a window order) and not your own count? | 1, 6, 13, 25 | Phase 1: who figures each quantity (decision 0070) and what the tool should fill in at all (decision 0068) | |
+| B | When you start a new estimate, do you open a blank master sheet or copy your last job? Is it the same sheet and the same cost code list for a garage, a new house and a renovation? | 5, 27 | Phase 1: templates by job type (decision 0020) and his code list as one standing list (decision 0029) | |
+| C | On the garage job you added 20% to framing material and 33% to siding material. What is that for: waste, prices moving, or surprises? Do you do it on every job, and does it stay once you have a real price? | 10, 44, 53 | Contingency by group (decision 0004) rests on one reading of one sheet. If it is waste, it is a different thing on screen | |
+| D | Your sheet adds sales tax first and then overhead and profit on top, so the tax gets marked up too. Is that how you mean it? Is the cushion in C marked up the same way? Why three tax lines? | 40, 42 | The order the cost summary adds up in (decisions 0002 and 0003), and every total the client sees | |
+| E | What do you hand a client as the estimate today? Could you send one real example, names blacked out? What do they see and not see (line detail, your markup, what is left out), and how do they sign? | 49 | Phase 2: the client copy, designed before any more screens lock (decision 0010) | |
+| F | How many bids do you usually get for one trade? Do you keep track of what each one includes, leaves out, and how long it is good for? | 51 | Phase 2: whether one price per line item is enough for sub pricing (decision 0022) | |
+| G | When the price changes after the client has seen it, what do you do: a new estimate, a change order, a marked-up copy? | 52 | Phase 2: revisions, and how versions work (decision 0001) | |
+
+### Why the rest can wait
+
+- **Test track, not design:** 3, 4, 7, 8, 21. Question 4 (more finished jobs) is the one that holds up testing; the owner is already asking for them.
+- **One job's oddities and his quantity habits** (decision 0060: flagged, not treated as his rule): 11, 15, 22, 23, 24, 28, 29, 30 to 38, 54. They matter when a job is drafted, not when a screen is drawn. Question 34 is read together with C.
+- **Already a setting he can change, so the screen does not depend on the answer:** 9 (the markup rate), 26 (how cost is filed).
+- **Better learned by watching him use the rough clickable version (phase 3):** 20.
+- **Too much to ask of him:** 48. His first template comes from his Job A sheet (decision 0020); he trims it on screen.
+
+### Out of date
+
+- **18** asks for an Excel file in his layout. The output is an on-screen estimate (decision 0015). Proposed: retire; E covers what he hands over.
+- **19** asks about colored cells. Confidence is two flags, off by default (decision 0045). Proposed: retire; phase 3 shows whether the flags help.
+
 ## Needed first
 1. **What does "80% done" mean to you?** Which parts do you want filled in, and which do you always do yourself?
 2. **What do you hand a new job in as?** Full plans, a sketch, a walk-through and notes, photos? Does it differ for renovations?
@@ -92,5 +128,6 @@ The wording is Claude's (Proposed); the facts they ask for are his. Each names t
 ## Change log
 | Date | What changed |
 |---|---|
+| Nov 20, 2026 | **Added:** the section "The sort" above the questions (phase 0, step 5): every question placed as for the builder now, for the owner, can wait, or out of date, with a seven-item short list and what each item holds up. Proposed by Claude; no question reworded, removed or sent |
 | Nov 20, 2026 | **Added:** questions 49 to 54, in one new section, from findings of the Nov 19 full review. Their wording is Proposed by Claude. Nothing else changed |
 | Nov 19, 2026 | Moved into the repository as `docs/builder/questions.md` from project document 06. Title lost its number; two lines added at the top. Questions 1 to 38 unchanged. **Added, all owed from the working log (part 2, section 3; part 3, section 3; part 5, section 3):** questions 39 to 48, in two new sections. Their wording is Proposed by Claude. **Not changed, known to be out of date:** question 18 still asks about an Excel file in his layout, and question 19 about colored cells; the output is now an on-screen estimate (decision 0015) and confidence is two flags (decision 0045). Both are left as written until the owner says how to reword them |
