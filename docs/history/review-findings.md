@@ -21,9 +21,9 @@
 | | Fixed | Decision | Question | Parked | Owner | Total |
 |---|---|---|---|---|---|---|
 | Full review | 8 | 7 | 5 | 33 | 1 | 54 |
-| Repository audit | 23 | 6 | 0 | 25 | 4 | 58 |
+| Repository audit | 24 | 6 | 0 | 25 | 3 | 58 |
 | Method audit, gaps and contradictions | 10 | 2 | 0 | 16 | 0 | 28 |
-| **All** | **41** | **15** | **5** | **74** | **5** | **140** |
+| **All** | **42** | **15** | **5** | **74** | **4** | **140** |
 
 A finding with two parts takes the status of the part still open, and the note says what is already done. The same problem often appears in more than one review; each mention has its own row so every review can be traced, and the note points to the first row.
 
@@ -176,7 +176,7 @@ The "short version" at its top is a summary of the findings below and has no row
 | RA-8j | `build_index.py` stamps the date, does not check the area word, nothing enforces "never hand-edit" | Parked | Code tidy. Small |
 | RA-8k | Privacy: the builder's first name in decision 0009 | Fixed | No match in the repository |
 | RA-8l | Privacy: could not check whether a vendor or sub name survives in his line wording, because the name list exists nowhere | Parked | Test track: the list is rebuilt from his two workbooks and kept outside the repository (`STATUS.md`). It matters more while the repository is public |
-| RA-8m | Privacy: a retail chain is named in the owner's quoted words in decision 0003 | Owner | A made-up example, not one of his vendors |
+| RA-8m | Privacy: a retail chain is named in the owner's quoted words in decision 0003 | Fixed | Kept as it is, by the owner (Said, Nov 20): it is his own made-up example, not one of the builder's vendors, and his words stay exact |
 | RA-8n | Privacy: city and market in `README.md` and `AGENTS.md`; a link into the owner's account in `canvas.md`; a personal name and company email on commits | Owner | These matter only while the repository is public (`STATUS.md`) |
 
 ### 2.4 Findings 9 and 10
@@ -243,4 +243,4 @@ Sections 1 to 5 of that report are proposals, not findings. The owner took the p
 ## Change log
 | Date | What changed |
 |---|---|
-| Nov 20, 2026 | New document (phase 0, step 4) |
+| Nov 20, 2026 | New document (phase 0, step 4). Same day: RA-8m closed by the owner's answer |
