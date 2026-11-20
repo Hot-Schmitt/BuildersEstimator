@@ -9,7 +9,7 @@ The project is moving from a claude.ai Project into this repository. Nothing of 
 
 ## Done
 - The method, standards and format documents are in `docs/`.
-- 71 decisions are recorded: 61 standing, 6 proposed, 4 superseded. The older decisions held in the project's "17 Current state" document were brought in on Nov 19 (0013 to 0066), each checked against the old working log for its date and the owner's words. `CURRENT.md` is now the full list.
+- 71 decisions are recorded: 66 standing, 1 proposed, 4 superseded. The older decisions held in the project's "17 Current state" document were brought in on Nov 19 (0013 to 0066), each checked against the old working log for its date and the owner's words. `CURRENT.md` is now the full list.
 - All eleven scripts are in `kit/`, with the cost code list and the Job A cost code rows. They were re-created from the project copies on Nov 19 (the owner holds no other copy) and checked by running them: both test scripts pass (4,275 damaged files tried, as recorded on Nov 16); the importer reproduces his sheet to the cent (471 lines, cost 231,247.05, total 289,058.81); the budget by cost code matches his cost workbook; the document maker's own checks pass; and the Job A remake reproduces the recorded scope and score figures.
 - First pass of moving the documents, Nov 19: the questions for the builder are in `docs/builder/questions.md` (ten owed questions added, 39 to 48), and the screen design document is in `docs/screens/laptop-screens-design.md` (moved as it was; the lines that are behind the decisions are listed at its top). The canvas drawings were not copied: `docs/screens/canvas.md` points to them and says why (Decided by Claude; reversible).
 - A method audit by three fresh researchers was run on Nov 19 at the owner's request (`docs/history/2026-11-19-method-audit/`): a cold audit of this repository, method and documentation structure, and market research on estimating software. Findings are not decisions.
@@ -20,7 +20,7 @@ The owner approved the phase path on Nov 19 (decision 0067). Phases 0 to 6 are s
 
 **Now: phase 0, close the records.**
 1. Fix the contradictions and dangling references listed in `docs/history/2026-11-19-method-audit/repository-audit.md` (two instruction sets, rules repeated with different wording, "doc NN" pointers, `README.md` describing folders that are empty).
-2. Put the five proposed decisions (0061, 0063 to 0066) and decision 0026 to the owner in one short batch.
+2. Put the five proposed decisions (0061, 0063 to 0066) and decision 0026 to the owner in one short batch. *Five done on Nov 19: all approved, 0065 for drawings only. Decision 0026 is still open, see below.*
 3. Create the empty `spec/` folder, its templates and its checking script, from `method-and-structure.md`, section 3.
 4. Give every finding in the two review documents one status: fixed, a decision, a question, or parked with a reason.
 5. Sort `docs/builder/questions.md` into: the owner can answer (general trade practice); only the builder can answer and it blocks design; can wait. Bring the short blocking list to the owner (decision 0069).
@@ -31,8 +31,7 @@ The owner approved the phase path on Nov 19 (decision 0067). Phases 0 to 6 are s
 
 ## Waiting on the owner
 - Decision 0071 is proposed and waits for phase 1 and a timed test; it does not need an answer now.
-- Five decisions are recorded as proposed and need a yes or no: 0061 (score reports lead with the unseen measured lines), 0063 (check a recommendation three ways before a lock), 0064 (sketch sample figures from one made-up data set), 0065 (walk the five tasks before showing a layout), 0066 (carry an earlier review's accepted fixes into a redraw).
-- Decision 0026 (a vendor's own quantity shown beside ours) is recorded as decided by Claude: the old log shows no lock of the owner's on it. Say if it should not stand.
+- Decision 0026 (a vendor's own quantity shown beside ours, he picks): put to the owner on Nov 19. He did not see the benefit of showing both and said a comparison could come later, once the tool has collected its own counts against vendors' quantities. Claude's proposal to replace it (the vendor's quantity comes in with the vendor's price on Apply; the comparison is parked) waits for his yes.
 
 ## Owed by the agent
 - From the method audit: nothing decides what happens when he types into the one price box (decision 0005) on a line item with a stored material and labor split; hard rules 7 and 8 in `AGENTS.md` are not in `docs/method.md`, which `AGENTS.md` says wins; seven kit scripts have no tests, including `kit/redaction.py`; the name check in the format module's save is skipped silently when no names are passed.

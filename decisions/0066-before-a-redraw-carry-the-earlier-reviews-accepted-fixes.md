@@ -1,9 +1,9 @@
 ---
 number: 0066
 title: Before a redraw, list the earlier review's accepted fixes and carry each one
-status: proposed
-date: 2026-11-16
-decided_by: claude
+status: accepted
+date: 2026-11-19
+decided_by: owner
 area: process
 supersedes:
 superseded_by:
@@ -26,11 +26,12 @@ them back. They were lost while simplifying for looks.
 
 ## What it costs us
 
-A checklist to keep for every redraw. Not yet approved.
+A checklist to keep for every redraw.
 
 ## His words
 
-None recorded. This is Claude's proposal; the owner has not been asked to approve it.
+None recorded as a sentence. Claude proposed this on 2026-11-16. The owner approved it on
+2026-11-19 by choosing "All three (Recommended)" when the proposed decisions were put to him in one batch.
 
 ## Links
 
