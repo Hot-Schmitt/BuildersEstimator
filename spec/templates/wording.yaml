@@ -1,0 +1,12 @@
+# Template for spec/wording.yaml: every word and message the user sees. One file.
+# A flat list. Every record starts with id. Text values in quotes.
+
+- id: W-TERM
+  on_screen: ""            # exactly as shown
+  means: ""
+  code_name: ""            # the name in the format and the code
+  never_say: []
+  used_on: []              # C- ids
+  source: ""               # a dated source, or "said <date>"
+  decisions: []            # D-NNNN
+  status: ""               # open | proposed | locked | parked | retired

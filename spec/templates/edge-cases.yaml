@@ -1,0 +1,13 @@
+# Template for spec/edge-cases.yaml: the register of awkward situations. One file.
+# A flat list. Every record starts with id. Text values in quotes.
+
+- id: E-NNN
+  area: ""                 # same areas as rules (see rules.yaml)
+  situation: ""            # what happens, concretely
+  harm: ""                 # wrong-money | lost-work | blocked | confusing | privacy
+  expected: ""             # what the tool does, or OPEN with the options
+  touches: []              # S-, C-, F-, R-, A- ids
+  found_by: ""             # full review, QA breaker, clickable trial, builder
+  status: ""               # open | proposed | locked | parked | retired
+  test: ""                 # AC- id or test name once written
+  decisions: []            # D-NNNN

@@ -15,6 +15,9 @@ decided_by:   owner | claude | builder
 area:         product | pricing | format | screens | data | process | testing
 supersedes:   number of the decision this replaces, or blank
 superseded_by: number of the decision that replaced this, or blank
+affects:      optional extra line, added once spec/ records exist: the ids this
+              decision governs, e.g. "affects: C-top-finalize, R-FIN-001". Each of
+              those records must cite this decision back (tools/check_spec.py checks).
 
 Copy this file, take the next free number, delete these comments.
 Never renumber an existing file. Never delete one.

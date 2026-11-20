@@ -1,0 +1,23 @@
+# Template for spec/stories.yaml: the story map. One file for the whole tool.
+# Copy to spec/stories.yaml and fill in. Text values in quotes.
+
+jobs:            # one sentence per kind of user: what they are trying to get done
+  - who: ""
+    job: ""
+
+activities:      # the backbone, in the order the work happens
+  - id: ACT-NN
+    name: ""
+
+stories:
+  - id: US-NNN
+    activity: ACT-NN
+    who: ""              # builder | owner-as-operator | client
+    story: ""            # "<who> can <do> so that <why>"
+    slice: ""            # skeleton | first | later | not-doing
+    screens: []          # S- ids
+    actions: []          # A- ids
+    acceptance: []       # AC- ids
+    decisions: []        # D-NNNN
+    status: ""           # open | proposed | locked | parked | retired
+    note: ""

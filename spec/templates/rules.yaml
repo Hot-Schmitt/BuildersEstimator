@@ -1,0 +1,15 @@
+# Template for spec/rules/<area>.yaml: one file per area.
+# The areas are listed in spec/README.md; the checker refuses any other.
+# A flat list. Every record starts with id. Text values in quotes.
+
+- id: R-AREA-NNN
+  rule: ""                  # one sentence, testable
+  kind: ""                  # block | warn | compute | default | permission | privacy
+  applies_to: []            # A-, F-, O- ids
+  enforced_in: ""           # shared check | screen | both | process
+  message: W-               # the words he sees, if any
+  acceptance: []            # AC- ids
+  cases: []                 # only when no screen owns the case: - id: AC-AREA-NN / case: "Given … when … then …"
+                            # (a case written here counts as one of this rule's acceptance cases)
+  decisions: []             # D-NNNN; a locked rule must cite one
+  status: ""                # open | proposed | locked | parked | retired
