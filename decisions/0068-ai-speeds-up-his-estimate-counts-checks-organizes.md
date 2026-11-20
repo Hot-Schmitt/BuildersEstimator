@@ -56,7 +56,12 @@ the market researcher found no data. The split of work this implies (which quant
 the tool counts, which come from a vendor's takeoff, which he enters, which wait for a
 sub's bid) is not designed yet. **Proposed by Claude, not decided:** each line item
 records who figures its quantity, so the tool knows whether to count, check, ask or stay
-out of the way.
+out of the way. The owner likes the idea and added that it needs a default,
+so a line item works before he has set it up (his words below). **Proposed default:** a
+line his sheet already marks as a sub's bid starts as "sub's bid"; every other line starts
+as "he enters it", with the tool's own count shown beside it as a check wherever it has
+one. He changes any line when he wants to, and the choice is kept in his template. To be
+decided in phase 1, when it can be seen in the flow.
 
 It is tested on the rough clickable version (decision 0011), including whether typing
 prices is as fast as a spreadsheet.
@@ -75,6 +80,11 @@ prices is as fast as a spreadsheet.
 
 > I'm just trying to think of a way of how to get the AI we have behind this [to] speed
 > [up] his process of estimating the most, to give them the most value.
+
+On who figures each quantity:
+
+> I like your proposed idea, but I think it needs a default state for him to use until he
+> does set each line item up
 
 (Dictated; bracketed words added for sense.)
 
