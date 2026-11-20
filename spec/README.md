@@ -50,17 +50,17 @@ Prose kinds (objects, screens, feature notes) are Markdown with a frontmatter bl
 
 - **An id never changes and is never reused.** A retired thing keeps its record with `status: retired`.
 - **The part of a control id after `C-` is the id used in the built screen.** One name from sketch to code. It has at least two parts (`C-top-finalize`).
-- **Anything written in the shape of an id is read as one**, anywhere in this folder, and must be defined. Do not write placeholder ids in real files. To point at something not written yet, give it a short record of its own with `status: open`; it then shows in `OPEN.md` until it is filled in.
-- **Rule areas:** `SAVE`, `FIN` (finalize), `TAX`, `MKP` (markup), `CTG` (contingency), `PRC` (pricing a line item), `VSP` (vendor or sub pricing), `SCP` (scope), `QTY`, `CONF` (confidence), `VER` (versions), `TPL` (templates), `CLI` (client copy), `PRIV` (privacy).
+- **Anything written in the shape of an id is read as one**, anywhere in this folder, and must be defined. That includes a capitalised trade term such as an S- or W- shape name; write those in lower case or spelled out. Do not write placeholder ids in real files. To point at something not written yet, give it a short record of its own with `status: open`; it then shows in `OPEN.md` until it is filled in.
+- **Rule areas** (the checker refuses any other; to add one, add it to `RULE_AREAS` in `tools/spec_lib.py` and here): `SAVE`, `FIN` (finalize), `TAX`, `MKP` (markup), `CTG` (contingency), `PRC` (pricing a line item), `VSP` (vendor or sub pricing), `SCP` (scope), `QTY`, `CONF` (confidence), `VER` (versions), `TPL` (templates), `CLI` (client copy), `PRIV` (privacy).
 
 ## Status and where a line came from
 
-- **Status, on every record:** `open` (not decided), `proposed` (the agent's recommendation, waiting on the owner), `locked` (decided, and cites the decision), `parked` (not in the first release, and says why), `retired`. A feature build note uses `options`, `decided` or `parked`. Controls, states and acceptance cases take the status of their file.
+- **Status, on every record:** `open` (not decided), `proposed` (the agent's recommendation, waiting on the owner), `locked` (decided, and cites the decision), `parked` (not in the first release, and says why; use it, not `open`, for anything meant for later, because a locked story may not reach anything open), `retired`. A feature build note uses `options`, `decided` or `parked`. Controls, states and acceptance cases take the status of their file.
 - **Provenance**, where a record carries it: `said`, `checked`, `inferred`, `proposed`, as in `AGENTS.md`.
-- **Decisions link both ways.** A record cites `decisions: [D-0050]`. A decision file may carry one optional frontmatter line, `affects: C-top-finalize, R-FIN-001`; when it does, the checker makes sure both ends agree.
+- **Decisions link both ways.** A record cites `decisions: [D-0050]`. A decision file may carry one optional frontmatter line, `affects: C-top-finalize, R-FIN-001`; when it does, the checker makes sure both ends agree. A control, state, action or acceptance case has no `decisions:` of its own; it is covered when the file it sits in cites the decision.
 
 ## What the checker fails on
 
-The list is at the top of `tools/check_spec.py`, which is its one home. In short: an id defined twice or cited and defined nowhere; a field and a control that disagree about each other; an action with no home; a locked screen or rule missing its acceptance cases; a decision link that is one-sided, or points at a superseded decision; a generated page that is out of date. With `--gate` it also fails on anything in the first release that is still open.
+The list is at the top of `tools/check_spec.py`, which is its one home. In short: an id defined twice or cited and defined nowhere; a field and a control that disagree about each other; an action with no home; a locked screen or rule missing its acceptance cases; a decision link that is one-sided, or points at a superseded decision; a generated page that is out of date. Something locked must also be complete: its acceptance cases written, and nothing it reaches still waiting. With `--gate`, everything in the first release must be.
 
 Design and reasons: `docs/history/2026-11-19-method-audit/method-and-structure.md`, section 3.

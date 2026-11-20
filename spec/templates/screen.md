@@ -30,6 +30,8 @@ Always cover: first use or empty, loading, normal, error, read-only, too narrow.
 
 ## Controls
 One row per control. The part of the id after "C-" is the id used in the built screen.
+Under "Reads / writes": leave blank, or open each part with "reads" or "writes" and split
+parts with ";" (for example: reads F-EST-TOTAL; writes F-EST-STATUS).
 
 | Id | Type | Label (W-) | Does (A- or plain words) | Reads / writes (F-) | Rules (R-) | States | Does NOT do |
 |---|---|---|---|---|---|---|---|
