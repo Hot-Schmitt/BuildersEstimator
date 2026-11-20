@@ -1,9 +1,9 @@
 """
 The one redaction step, shared by every script that reads the builder's files.
 
-Names of clients, vendors and subs are replaced from a name list kept with the
-job's data on the user's computer: {"name": "replacement", ...}. The list is real
-data and never goes into code or project documents. Product brands are not on the
+Names of clients, vendors and subs are replaced from a name list: {"name": "replacement", ...}. The list is real
+data. It never goes into code, documents or this repository; it is rebuilt from the
+builder's own estimate file each time it is needed (decision 0059). Product brands are not on the
 list: a brand is part of the spec (decided by the user, Nov 16, 2026).
 
 Redaction happens once, where his wording is first read. Every later write is

@@ -1,9 +1,9 @@
 # Method: how a draft estimate gets made, marked and improved
 
 **Moved here Nov 18, 2026** from project document "03 Estimator - Method". See the change log at the foot for what changed on the way and after.
-**Reading the references:** `format.md` and `standards.md` are the two files beside this one. "doc NN" means a project document that is not in this repository yet: 01 Start here · 02 Research · 04 Builder estimate format and price list seed · 05 Job A actual costs · 06 Questions for the builder (to become `docs/builder/questions.md`) · 07 Working log (to become `docs/history/`).
+**Reading the references:** `format.md` and `standards.md` are the two files beside this one. "doc NN" means a project document that is not in this repository yet: 01 Start here · 02 Research · 04 Builder estimate format and price list seed · 05 Job A actual costs · 07 Working log, kept as history. Where a line here once told you to write to one of them, it now names the place in this repository. Questions for the builder are in `docs/builder/questions.md`.
 
-**Status:** Proposed, Nov 16, 2026. Brought into line with standing decisions Nov 18 (change log at the foot). Built from the research in doc 02 and the builder's files. Change it when a test shows something better; note the change in doc 07. Changed Nov 16 after the first blind draft (approved by the user): overlapping lines in step 4, "plan minimum" in steps 5 and 7, and where test answers are kept. Changed Nov 16 (approved by the user): step 8 now describes the on-screen estimate, with Excel and CSV as exports.
+**Status:** Proposed, Nov 16, 2026. Brought into line with standing decisions Nov 18 (change log at the foot). Built from the research in doc 02 and the builder's files. Change it when a test shows something better; note the change in the change log at the foot. Changed Nov 16 after the first blind draft (approved by the user): overlapping lines in step 4, "plan minimum" in steps 5 and 7, and where test answers are kept. Changed Nov 16 (approved by the user): step 8 now describes the on-screen estimate, with Excel and CSV as exports.
 
 ## The idea in one paragraph
 An estimate is three questions: **what is being built** (scope), **how much of it** (quantity) and **what it costs him** (price). Each goes wrong in a different way, so each is handled, marked and corrected separately. The draft is always his lines, his order, his prices. The tool's job is to fill what it can prove, mark what it cannot, and point him at the money that is least certain.
@@ -91,7 +91,7 @@ Rules:
 - Only his prices. If he has no price for a line, leave it blank and mark it Low. A generic number may sit in a note as "outside reference", never in the price cell.
 - Show the age of every price. Old prices lower the confidence mark.
 - No automatic inflation. If prices need bringing forward, propose a method and get it approved first.
-- Markup, allowances and contingency are separate visible lines, following his practice once he tells us what it is (doc 06).
+- Markup, allowances and contingency are separate visible lines, following his practice once he tells us what it is (`docs/builder/questions.md`).
 
 ## Step 7 · Mark confidence
 Each line gets two marks, then the lower of the two becomes the line's mark.
@@ -110,7 +110,7 @@ Each line gets two marks, then the lower of the two becomes the line's mark.
 
 **What he sees**
 **Changed (Said, Nov 16, 9 pm; `standards.md`, section 3):** all three marks are still worked out and stored on every line, but the screen shows two flags, High and Low, off by default and turned on in settings. Medium is stored and not shown. "Check these first" appears on screen as "Double-check these first"; it starts on and he can switch it off. The list below is what the marks carry; the screen shows it within those limits.
-- A colored cell and a word on every line: green High, yellow Medium, red Low. Always the word as well as the color.
+- A mark on every line: High, Medium or Low. Wherever a colour is shown, the word is shown with it.
 - A one-line reason on every Medium and Low.
 - A summary at the top by division: total dollars, and how many of those dollars are High, Medium and Low.
 - **"Check these first":** the ten or so lines ranked by dollars × doubt, so a small shaky line does not outrank a large one.
@@ -132,7 +132,7 @@ Changed Nov 16 (Said: the output is a modern on-screen estimate; Excel and CSV a
 ## Step 9 · Learn from what he changes
 When he sends back his finished estimate:
 1. Compare it to the draft line by line.
-2. Log every difference in doc 07, sorted into one kind:
+2. Log every difference in that job's results document (in `jobs/`), sorted into one kind:
    - **Quantity:** we measured or calculated wrong.
    - **Price:** his price has moved, or he priced by gut.
    - **Missing line:** he added something we left out.
@@ -155,13 +155,13 @@ When a job finishes and real costs are in, repeat the comparison against actual 
    - **Dollars:** difference by division and in total.
    - **Marks:** were the lines we got wrong the ones we marked Low? If errors hide under High marks, the marking is broken.
 4. Then compare both to actual cost.
-5. Write the result in doc 07.
+5. Write the result in that job's results document (in `jobs/`).
 
 **Keeping a blind test blind (approved Nov 16):**
 - His lines are listed for the run by script, with quantities and prices hidden. A filled price gives away which lines he used.
 - The draft file is frozen before his estimate is opened. Scoring is done by script.
 - His answers for the job under test (his quantities, his line choices, his costs) live only in that job's results document and in docs 04 and 05. A blind run does not open them.
-- Scored figures never go into "01 Start here", "07 Working log" or a job facts sheet. The log carries the score and a pointer to the results document.
+- Scored figures never go into `STATUS.md` or a job facts sheet. They stay in that job's results document; `STATUS.md` carries only a pointer to it.
 - A job whose answers have been seen cannot be used for a blind test again. Say so in the results.
 
 **Honest limits of the first test:** Job A's estimate is also where the price list comes from, so on Job A the prices will match by design. Job A tests reading, scope and quantities only. Prices can only be tested on a second job, with the price list built from different jobs than the one under test.
@@ -175,6 +175,8 @@ When a job finishes and real costs are in, repeat the comparison against actual 
 - Change his lines, order, units or divisions.
 - Draft a renovation without a scope list.
 - Decide engineering questions (beam sizes, footing design).
+- Use the drawn minimum where his recorded building habit differs (bigger footings, for example). His recorded rule wins; until a rule is recorded, the line stays Medium at best.
+- Pick between the plans and his past estimates when they disagree. Flag it.
 - Call a draft a bid. It is a draft until he finishes it.
 
 ## Change log
@@ -182,3 +184,4 @@ When a job finishes and real costs are in, repeat the comparison against actual 
 |---|---|
 | Nov 18, 2026 | Moved into the repository as `docs/method.md` from project document 03. Title lost its number; a note on reading the references added at the top; "doc 09" and "doc 10" now read `standards.md` and `format.md`. No rule changed. **Known to be behind, not changed here:** step 8 still says every save is a new version (decision 0001 replaced that); step 7's "what he sees" still shows three marks (the screens show two flags, `standards.md` section 3); step 4 is owed an update (working log part 5, section 3) |
 | Nov 18, 2026 (later) | Brought into line with standing decisions, approved by the user ("lock all your recommendations"). Step 4: the template rule added (self-review decision 3, locked Nov 16). Step 7: a note that the screen shows two flags, off by default, with Medium stored and not shown; the three marks themselves are unchanged. Step 8: what is always visible now matches `standards.md`; the confidence word shows when flags are on; saving follows decision 0001 and the Nov 18 keyboard lock. The three "known to be behind" points in the row above are now closed |
+| Nov 19, 2026 | Phase 0, records clean-up. No rule changed. Two hard rules that were only in `AGENTS.md` added to "What the tool must never do" (his building habits; plans against past estimates). Instructions that pointed to project documents 01, 06 and 07 now name their place in this repository. Step 7's old line about coloured cells replaced so it no longer contradicts the note above it |

@@ -1,9 +1,9 @@
 ---
 number: 0063
 title: Check a recommendation three ways before it goes to the owner for a lock
-status: proposed
-date: 2026-11-18
-decided_by: claude
+status: accepted
+date: 2026-11-19
+decided_by: owner
 area: process
 supersedes:
 superseded_by:
@@ -31,12 +31,12 @@ What happened.
 
 ## What it costs us
 
-A little more work before each set of decisions reaches him. Not yet approved; the
-current-state document lists it as waiting on the owner.
+A little more work before each set of decisions reaches him.
 
 ## His words
 
-None recorded. This is Claude's proposal; the owner has not been asked to approve it.
+None recorded as a sentence. Claude proposed this on 2026-11-18. The owner approved it on
+2026-11-19 by choosing "All three (Recommended)" when the proposed decisions were put to him in one batch.
 
 ## Links
 

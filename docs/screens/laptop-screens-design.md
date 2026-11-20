@@ -1,5 +1,7 @@
 # Design document: laptop screens
 
+**Do not build from this document as it stands.** It is behind the decisions listed below, and the order of work has changed (decisions 0010 and 0011). It is kept for its control lists, which move into the `spec/` folder with the newer decisions applied.
+
 **Moved here Nov 19, 2026** from project document "16 Estimator - Design document, laptop screens". The text below is unchanged apart from the title (see the change log at the foot).
 **Reading the references:** "doc 07" is the old working log (not in this repository yet), "doc 09" is `docs/standards.md`, "doc 10" is `docs/format.md`. `decisions/` holds the decision records.
 **Behind the decisions on these lines; the decision wins until this document is brought into line:**
@@ -10,7 +12,7 @@
 - **Missing:** the Tax chip and its states and the division tax line (decision 0003); the material and labor split in Details (decision 0005); the percent or dollar switch and the "does not grow" note on the cost summary (decision 0002); contingency by group (decision 0004); the tax question when pricing is applied (decision 0003).
 - **Order of work has changed:** the back half of the estimate is designed, and one rough clickable version is tried, before any more of this is locked (decisions 0010 and 0011).
 
-**Purpose:** the build source for the estimator's laptop screens. It says what each screen shows, names every control, gives its states and what it must do, and records the sizes, colours and wording. The screens are built by re-creating this document together with the drawings on the design canvas.
+**Purpose (as written on Nov 17; see the note at the top):** the build source for the estimator's laptop screens. It says what each screen shows, names every control, gives its states and what it must do, and records the sizes, colours and wording. The screens are built by re-creating this document together with the drawings on the design canvas.
 **Status:** first pass, Nov 17, 2026. Covers only what is already drawn on the canvas "Estimate screen - laptop" (four drawings), with the eight fixes and the Nov 17 decisions written in. **Not reviewed by a fresh reviewer and not locked.** Screens not yet drawn are listed in section 9.
 **Sources:** the canvas code, read Nov 17 (files Main, LineItemDetails, RemoveConfirm, FinalizeWarning; canvas version 1794889583-320a). Decisions: doc 07 parts 2 to 5. Standards: doc 09.
 **Which wins:** the canvas was not redrawn (Said, Nov 16: no redraw now). Where this document and the canvas differ, **this document wins**; every difference is listed in section 3. The canvas is brought into line when the undrawn screens are added (Decided by Claude; reversible).

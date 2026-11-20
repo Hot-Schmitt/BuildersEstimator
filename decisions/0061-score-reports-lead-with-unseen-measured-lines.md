@@ -1,9 +1,9 @@
 ---
 number: 0061
 title: Every score report leads with unseen measured lines and dollars
-status: proposed
-date: 2026-11-16
-decided_by: claude
+status: accepted
+date: 2026-11-19
+decided_by: owner
 area: testing
 supersedes:
 superseded_by:
@@ -33,9 +33,8 @@ The headline is the worst number, every time. That is the point.
 
 ## His words
 
-None recorded. Claude proposed this for the project instructions after the second time;
-the log does not record the owner approving that wording. `kit/score.py` already prints
-in this order, and the reports since have followed it.
+None recorded as a sentence. Claude proposed this on 2026-11-16. The owner approved it on
+2026-11-19 by choosing "Yes (Recommended)" when the proposed decisions were put to him in one batch.
 
 ## Links
 

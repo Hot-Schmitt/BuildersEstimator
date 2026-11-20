@@ -1,9 +1,9 @@
 ---
 number: 0065
 title: Walk the owner's five tasks on a layout before showing it
-status: proposed
-date: 2026-11-16
-decided_by: claude
+status: accepted
+date: 2026-11-19
+decided_by: owner
 area: process
 supersedes:
 superseded_by:
@@ -14,6 +14,9 @@ superseded_by:
 Before a layout is shown to the owner, Claude walks the five tasks on it click by click
 (find a line item, change a price, add one, find what needs pricing, get back to the
 total) and reports where each one stalls.
+
+This applies to drawings. Once the rough clickable version exists (decision 0011), the
+five tasks are run on that instead of walked on a picture.
 
 ## Why
 
@@ -27,11 +30,12 @@ after Claude had presented it as the improved version. It had been judged by eye
 ## What it costs us
 
 Slower drawings. Walking a task on a static picture also proves less than doing it on
-something clickable, which is what decision 0011 is for. Not yet approved.
+something clickable, which is what decision 0011 is for.
 
 ## His words
 
-None recorded. This is Claude's proposal; the owner has not been asked to approve it.
+None recorded as a sentence. Claude proposed this on 2026-11-16. The owner approved it on
+2026-11-19 by choosing "Yes, drawings only (Recommended)" when the proposed decisions were put to him in one batch.
 
 ## Links
 

@@ -1,12 +1,12 @@
 ---
 number: 0026
 title: A vendor's own quantity is shown beside ours, flagged, and he picks
-status: accepted
+status: superseded
 date: 2026-11-16
 decided_by: claude
 area: pricing
 supersedes:
-superseded_by:
+superseded_by: 0072
 ---
 
 ## Decision

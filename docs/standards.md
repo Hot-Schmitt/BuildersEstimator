@@ -1,21 +1,21 @@
 # Build, design and review standards
 
 **Moved here Nov 18, 2026** from project document "09 Estimator - Build, design and review standards". See the change log at the foot for what changed on the way and after.
-**Reading the references:** `method.md` and `format.md` are the two files beside this one. "doc NN" means a project document that is not in this repository yet: 01 Start here · 04 Builder estimate format and price list seed · 05 Job A actual costs · 07 Working log (to become `docs/history/`) · 11 Builder cost code list. In this repository, decisions are recorded in `decisions/` and mistakes in `docs/history/mistakes.md` (see `AGENTS.md`).
+**Reading the references:** `method.md` and `format.md` are the two files beside this one. "doc NN" means a project document that is not in this repository yet: 01 Start here · 04 Builder estimate format and price list seed · 05 Job A actual costs · 07 Working log · 11 Builder cost code list. They are kept as history. Where a line here once told you to write to one of them, it now names the place in this repository. In this repository, decisions are recorded in `decisions/` and mistakes in `docs/history/mistakes.md` (see `AGENTS.md`).
 
 **Purpose:** how the estimator software is built, how it should look and feel, and how every big piece of work is checked before the user sees it. Written to avoid what went wrong on an earlier build (Said): lost context, broken databases, duplicate code and files, inconsistent design, fixes that broke other parts, and documents that contradicted each other.
-**Status:** in force through project instructions version 1.1, Nov 16, 2026. A change needs the user's OK and a line in doc 07.
+**Status:** in force since Nov 16, 2026. A change needs the owner's OK and a decision file.
 
 ## 1. Build rules
 1. **One source of truth per thing.** One shared estimate format, one price list, one cost code list, one copy of each plan set, one copy of each script. Before creating a file, check whether one already does the job, and change that file instead.
 2. **Build the real thing, not patches.** Fix the cause, not the symptom. If a fix touches something else, check that other thing too.
-3. **Small, reversible steps.** One change at a time. Every change can be undone (the code is kept in git), and every notable change gets a line in doc 07.
+3. **Small, reversible steps.** One change at a time. Every change can be undone (the code is kept in git), and every notable change is described in its commit message.
 4. **Fixed steps in code, judgement in Claude.** Anything that must come out the same every time is a tested script: reading page images, quantity rules, pricing lookups, totals, exports and checks. Reading plans and deciding scope stay with Claude, marked by confidence.
 5. **Clean, commented code.** Plain names. A short note at the top of each file says what it does. No dead code left behind.
 6. **Built to move.** Everything runs on the user's computer with no server, laid out so it can move to a server or into the operations app without a rewrite.
 7. **The shared estimate format is a contract.** Changing it needs the user's OK. It carries a version number, and the operations app must be told of any change.
 8. **Settings are suggestions.** Defaults, limits and thresholds go to the user as proposals. Reviewers do not set them.
-9. **Real data stays private.** Redaction rules in the project instructions apply to code, test files and screenshots too. Redaction runs from a name list kept with the job's data, with an automatic check that no listed name survives; never from hand-picked rows (Said, approved Nov 16).
+9. **Real data stays private.** The privacy rules in `AGENTS.md` apply to code, test files and screenshots too. Redaction runs from a name list, which is real data: it is never saved in this repository and is rebuilt from the builder's own estimate file each time it is needed (decision 0059), with an automatic check that no listed name survives; never from hand-picked rows (Said, approved Nov 16).
 10. **Figures from his files come from a script.** Any figure taken from the builder's files is produced by script and checked against his own total cells before it goes in a document. Documents that mirror his files (docs 04, 05, 11) are written by script, not typed (Said, approved Nov 16).
 
 ## 2. Storage rules
@@ -58,7 +58,7 @@
 
 **Spacing and buttons (Said, Nov 16, 9 pm).** One spacing scale and one set of button sizes, written once in the design document and used on every screen. A group of actions follows one layout rule, so buttons never wrap unevenly.
 
-**Sketches (Said, Nov 16, 9 pm).** Screens are drawn with a design reviewer's help. A locked sketch is kept as its own source, not only as a description: the drawing's code, with every control given an id, and a control list (id, label, what it does, its states). The two must match exactly. The screens are built by re-creating the locked source, so what was approved is what is built. A screen is drawn at its real size, on a design canvas, not inside the chat's narrow panel (Said, Nov 16, 11 pm: the narrow sketches read as scrunched).
+**Sketches (Said, Nov 16, 9 pm).** Screens are drawn with a design reviewer's help. A locked sketch is kept as its own source, not only as a description: the drawing's code, with every control given an id, and a control list (id, label, what it does, its states). The two must match exactly. The screens are built by re-creating the locked source, so what was approved is what is built. A screen is drawn at its real size, on a design canvas, not inside the chat's narrow panel (Said, Nov 16, 11 pm: the narrow sketches read as scrunched). Before any screen is locked, one rough clickable version is built on made-up data and the five tasks are run on it; the lock and the detailed write-up come after (decision 0011).
 
 ## 4. Review after every big build or change
 A big build is a new screen, a new script, a change to the shared format, or a full estimate run.
@@ -69,14 +69,7 @@ A big build is a new screen, a new script, a change to the shared format, or a f
 - Check totals in code against the Excel export.
 - Confirm no duplicate files and no leftover temporary files, and check the folder size.
 
-**Step 2 · Fresh review:** a separate reviewer with no chat history checks the work against this document. Four views (Proposed):
-
-| Reviewer | Asks |
-|---|---|
-| Builder's eye | Would the builder trust and use this in minutes? Is anything confusing or missing for a builder? |
-| Accuracy | Are numbers right, traced to a source, and marked honestly? Do the rules in `method.md` hold? |
-| Design | Does it meet section 3? Is it consistent with the rest of the product? |
-| Engineering | Is the code clean and tested, the data safe, the storage lean, and nothing duplicated or broken elsewhere? |
+**Step 2 · Fresh review:** separate reviewers with no chat history check the work against this document. The roles, and what each one is asked, are in `docs/reviewers.md`; that file is the one home for them.
 
 **Screens are reviewed in two lanes, by two separate reviewers (Said, Nov 16, 11 pm):**
 1. **Usability and logic:** function, logic and button mapping. Does every control do what its label says, and can he do each task without help?
@@ -89,8 +82,8 @@ Both reviewers work from the same real screenshots at the three widths. A review
 ## 5. Learning from Claude's mistakes
 When a mistake is found (by the user, a reviewer, or a test):
 1. Fix it.
-2. Log it in doc 07, section 8: what happened, why, the fix, and whether a rule should change.
-3. If a rule would have prevented it, propose the change to the user in one line. Once approved, update the rule here, in `method.md` or in the project instructions, and note it in doc 07.
+2. Log it in `docs/history/mistakes.md`: what happened, why, the fix, and whether a rule should change.
+3. If a rule would have prevented it, propose the change to the user in one line. Once approved, update the rule here, in `method.md` or in `AGENTS.md`, and record it as a decision.
 4. If the same kind of mistake happens twice, a rule change is required.
 
 ## 6. Keeping context (hand-offs)
@@ -99,7 +92,7 @@ Chats lose detail as they grow, but every new chat costs usage to start (rereadi
 - Claude notices it is unsure of something said earlier in the chat.
 - Never after a small run just because it finished. A finished task is the best moment to hand off, but only when one of the two points above also holds.
 
-Hand-off steps are in doc 01. The starter line is given in a code block the user can copy. The documents are the memory; the chat is not.
+To hand off: update `STATUS.md`, then give the starter line (decision 0056). The starter line is given in a code block the user can copy. The documents are the memory; the chat is not.
 
 ## 7. Spending the user's usage
 - Warn before anything that will use a lot (a full plan read, a large build, a review round). A two-lane screen review is two reviewers, each roughly 85,000 to 125,000 tokens by past rounds.
@@ -114,3 +107,4 @@ Hand-off steps are in doc 01. The starter line is given in a code block the user
 | Nov 17, 2026 (10:35 am) | Brought into line with what the user said on Nov 16 and 17 (doc 07 parts 3 and 4). Section 2: the version rule changed (changes save into the current version; a new version only by Duplicate or Finalize). Section 3: laptop first; the "always visible" line settled ("Double-check these first" starts on); automatic saving; eye drawn to what needs attention; buttons that look like buttons; the build note on premium buttons, colour theme and icons; "estimated range" added to the fixed wording; screens drawn at real size on a canvas; "works on a phone and a laptop" reordered. Section 4: self-check uses real screenshots at three widths; the two-lane screen review added. Section 7: the cost of a two-lane review. Not added: rules that are still only Proposed in doc 07 section 8 (sample figures from one made-up data set; walking the five tasks before showing a layout; carrying earlier accepted fixes into a redraw) |
 | Nov 18, 2026 | Moved into the repository as `docs/standards.md` from project document 09. Title lost its number; a note on reading the references added at the top; "doc 03" now reads `method.md`. No rule changed. **Known to be behind, not changed here** (working log part 5): section 3 is owed the "do not force him to work a way he does not want" principle (Said, Nov 17) and the "simple on the surface, not busy" standard (Said, Nov 18); section 2's "as he types" is now "when he leaves the box" (lock 7, Nov 18) |
 | Nov 18, 2026 (later) | Brought into line with working log part 5, approved by the user ("lock all your recommendations"). Section 2: a change saves when he leaves the box. Section 3: two standing lines added in the user's words, "do not force him" (Nov 17) and "simple on the surface" (Nov 18). The points listed as behind in the row above are now closed |
+| Nov 19, 2026 | Phase 0, records clean-up. No rule changed. Status no longer rests on the old project instructions. Instructions that pointed to project documents 01 and 07 now name their place in this repository. Build rule 9 says where the name list lives, as decision 0059 has it. Section 3: the rough clickable step added (decision 0011). Section 4: the four review views, which were only Proposed, replaced by a pointer to `docs/reviewers.md` so the roles have one home (Decided by Claude) |
