@@ -1,0 +1,4 @@
+# What the scripts in kit/, tools/ and tests/ need beyond Python 3.13 itself.
+openpyxl    # kit: reading the builder's workbooks, writing Excel exports
+pytest      # tests
+pyyaml      # tools: reading spec/ (tools/spec_lib.py)

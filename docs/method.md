@@ -16,7 +16,7 @@ Decide the job type first. It changes everything after.
 | Needs | Plans | Plans | Plans **and** a scope list | Split it into parts and treat each by its type |
 | Scope starts from | His full checklist | His full checklist, small-building version | The scope list only | |
 | Extra questions | Site, finish level | Utility tie-ins, sewer, power, access | Age of house, what stays, what is hidden | |
-| Suggested cushion | 5–10% | 5–10%, more for tie-ins | 15–25% | Per part |
+| Suggested cushion (outside reference, not the builder's figure) | 5–10% | 5–10%, more for tie-ins | 15–25% | Per part |
 
 Job A is mixed: a new garage apartment plus a small renovation at the main house.
 
@@ -185,3 +185,4 @@ When a job finishes and real costs are in, repeat the comparison against actual 
 | Nov 18, 2026 | Moved into the repository as `docs/method.md` from project document 03. Title lost its number; a note on reading the references added at the top; "doc 09" and "doc 10" now read `standards.md` and `format.md`. No rule changed. **Known to be behind, not changed here:** step 8 still says every save is a new version (decision 0001 replaced that); step 7's "what he sees" still shows three marks (the screens show two flags, `standards.md` section 3); step 4 is owed an update (working log part 5, section 3) |
 | Nov 18, 2026 (later) | Brought into line with standing decisions, approved by the user ("lock all your recommendations"). Step 4: the template rule added (self-review decision 3, locked Nov 16). Step 7: a note that the screen shows two flags, off by default, with Medium stored and not shown; the three marks themselves are unchanged. Step 8: what is always visible now matches `standards.md`; the confidence word shows when flags are on; saving follows decision 0001 and the Nov 18 keyboard lock. The three "known to be behind" points in the row above are now closed |
 | Nov 19, 2026 | Phase 0, records clean-up. No rule changed. Two hard rules that were only in `AGENTS.md` added to "What the tool must never do" (his building habits; plans against past estimates). Instructions that pointed to project documents 01, 06 and 07 now name their place in this repository. Step 7's old line about coloured cells replaced so it no longer contradicts the note above it |
+| Nov 20, 2026 | No rule changed. Step 1: the "Suggested cushion" row is labelled an outside reference, since the percents are not the builder's (full review, pricing checker, item 10; `docs/history/review-findings.md`, FR-3.10a) |

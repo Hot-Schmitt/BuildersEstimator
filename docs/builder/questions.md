@@ -75,6 +75,15 @@ These were listed as owed to this page on Nov 16 and Nov 18. The wording is Clau
 47. Do you say "renovation" or "remodel"? Is an "addition" its own kind of job?
 48. Would you go through your sheet once and tick the lines you normally use on a garage apartment? (Decision 0020: his first template.)
 
+## About what the client gets, bids and changes (added Nov 20, from the full review)
+The wording is Claude's (Proposed); the facts they ask for are his. Each names the review finding it came from (`docs/history/review-findings.md`).
+49. What do you hand a client today as the estimate: your sheet, a summary, a proposal, a contract? What does the client see and not see (line detail, your markup, exclusions, terms)? How do they sign? (FR-2.1)
+50. Do you price alternates (an add or a deduct the client can choose)? How do you show them? (FR-2.5)
+51. How many bids do you usually get for one trade? Do you keep track of what each bid includes, leaves out, and how long it is good for? (FR-2.4, FR-3.9)
+52. When an estimate changes after the client has seen it, what do you do: a new estimate, a change order, a marked-up copy? How does the client see what changed? (FR-2.5)
+53. The 20% on framing material and the 33% on siding material on Job A: what is each one for? Waste, a cushion for prices moving, or cover for surprises? Is it on top of the extra you already order over the plan count? (FR-3.3; goes with questions 10, 34 and 44.)
+54. Do you price general conditions from how long the job will run? How do you judge the length of a job? (FR-3.10c; goes with questions 11 and 15.)
+
 ## Answers log
 | # | Date | His words | What it changes |
 |---|---|---|---|
@@ -83,4 +92,5 @@ These were listed as owed to this page on Nov 16 and Nov 18. The wording is Clau
 ## Change log
 | Date | What changed |
 |---|---|
+| Nov 20, 2026 | **Added:** questions 49 to 54, in one new section, from findings of the Nov 19 full review. Their wording is Proposed by Claude. Nothing else changed |
 | Nov 19, 2026 | Moved into the repository as `docs/builder/questions.md` from project document 06. Title lost its number; two lines added at the top. Questions 1 to 38 unchanged. **Added, all owed from the working log (part 2, section 3; part 3, section 3; part 5, section 3):** questions 39 to 48, in two new sections. Their wording is Proposed by Claude. **Not changed, known to be out of date:** question 18 still asks about an Excel file in his layout, and question 19 about colored cells; the output is now an on-screen estimate (decision 0015) and confidence is two flags (decision 0045). Both are left as written until the owner says how to reword them |
