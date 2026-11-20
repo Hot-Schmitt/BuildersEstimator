@@ -54,7 +54,7 @@ owner: takeoffs take time, and an AI that can at least check numbers is worth ha
 evidence on where a small builder's estimating time actually goes is partly inference;
 the market researcher found no data. The split of work this implies (which quantities
 the tool counts, which come from a vendor's takeoff, which he enters, which wait for a
-sub's bid) is not designed yet. **Proposed by Claude, not decided:** each line item
+sub's bid) is not designed yet. **Decided the same evening as decision 0070** (with its default), and the possible upgrade is decision 0071 (proposed). As first written here: each line item
 records who figures its quantity, so the tool knows whether to count, check, ask or stay
 out of the way. The owner likes the idea and added that it needs a default,
 so a line item works before he has set it up (his words below). **Proposed default:** a
